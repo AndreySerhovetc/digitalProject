@@ -1,0 +1,40 @@
+    .task__container {
+        padding: 120px 0;
+    }
+    
+    .section__title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 64px;
+        color: $dark-gray;
+    }
+    
+    .task__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-nuber {
+            font-family: "SFProDisplay";
+            font-weight: 900;
+            font-size: 200px;
+            line-height: 239px;
+            color: $gray;
+            margin-right: 30px;
+        }
+        &-text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 36px;
+            color: $black;
+            &--left {
+                width: 279px;
+                height: 144px;
+            }
+            &--right {
+                width: 420px;
+                height: 144px;
+            }
+        }
+    }

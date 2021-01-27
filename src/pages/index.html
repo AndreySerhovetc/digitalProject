@@ -1,0 +1,137 @@
+@@include("parts/_header.html")
+<section class="container header__hero">
+    <div class="left">
+        <div class="header__hero-info">
+            <p class="header__hero-text">Project</p>
+            <h1 class="header__hero-title">Nurtown</h1>
+        </div>
+        <div class="control-buttons">
+            <button class="btn prev-btn">
+                <img src="img/arrow-left.svg" alt="arrow-next">
+            </button>
+            <button class="btn next-btn  btn-active">
+                <img src="img/arrow-right.svg" alt="arrow-next">
+            </button>
+        </div>
+        <div class="pagination">
+            <div class="pagination__slide"></div>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="swiper-container header-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="slide-imge" src="img/header-slide1.jpg" alt="slide">
+                </div>
+                <div class="swiper-slide">
+                    <img class="slide-imge" src="img/header-slide2.jpg" alt="slide">
+                </div>
+
+            </div>
+            <div class="swiper-pagination pagination"></div>
+        </div>
+        <a class="more-info more-info--header" href="#">Bзглянуть</a>
+    </div>
+
+
+</section>
+<section class="container about_container">
+    <div class="about__info-img">
+        <img class="pic3" src="img/about1.jpg" alt="about">
+        <img class="pic2" src="img/about2.jpg" alt="about">
+        <img class="pic1" src="img/about3.jpg" alt="about">
+    </div>
+    <div class="about__info">
+        <h2 class="about__info-title">О компании</h2>
+        <p class="about__info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <a class="more-info more-info--about" href="#">Читать</a>
+    </div>
+
+</section>
+<section class="container task__container ">
+    <h2 class="section__title">Основные задачи</h2>
+    <div class="task__info">
+        <div class="task__info task__info-left">
+            <span class="task__info-nuber">1</span>
+            <p class="task__info-text task__info-text--left">Создание комфортных условий и повышение качества обслуживания клиентов</p>
+        </div>
+        <div class="task__info task__info-right">
+            <span class="task__info-nuber">2</span>
+            <p class="task__info-text task__info-text--right">Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала, закупки нового оборудования и усиленной рекламы на рынке</p>
+        </div>
+    </div>
+</section>
+<section class="container project__container">
+    <h2 class="section__title">Наши проекты</h2>
+    <div class="project-galery">
+        <div class="img1">
+            <img class="galery-img" src="img/project1.jpg" alt="project">
+            <div class="hover">
+                <p class="hover__title">ДОСУГОВЫЙ ЦЕНТР</p>
+                <a class="hover__link" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img2">
+            <img class="galery-img" src="img/project2.jpg" alt="project">
+            <div class="hover">
+                <p class="hover__title">ДОСУГОВЫЙ ЦЕНТР</p>
+                <a class="hover__link" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img3">
+            <img class="galery-img" src="img/project3.jpg" alt="project">
+            <div class="hover hover-small">
+                <p class="hover__title-small">ДОСУГОВЫЙ ЦЕНТР</p>
+                <a class="hover__link" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img4">
+            <img class="galery-img" src="img/project4.jpg" alt="project">
+            <div class="hover">
+                <p class="hover__title">ДОСУГОВЫЙ ЦЕНТР</p>
+                <a class="hover__link" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img5">
+            <img class="galery-img" src="img/project5.jpg" alt="project">
+            <div class="hover hover-small">
+                <p class="hover__title-small">ДОСУГОВЫЙ ЦЕНТР</p>
+                <a class="hover__link" href="#">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="more-info-black">
+        <a class="more-info-black-link" href="#">Все проекты</a>
+    </div>
+
+
+</section>
+<section class="container contact-us__container">
+    <h2 class="section__title">Связаться с нами</h2>
+    <div class="contact-us">
+        <form action="#" class="form js-form" method="POST">
+            <input class="form__input" type="text" name="user_name" data-validate-field="name" placeholder="Имя" required>
+            <input class="form__input phone" type="tel" name="user_phone" data-validate-field="phone" placeholder="Номер телефона" required>
+            <input class="form__input" type="email" name="user_email" data-validate-field="email" placeholder="Email" required>
+            <input class="form__input " type="text" name="user_service" data-validate-field="service" placeholder="Интересующий товар/услуга" required>
+            <textarea class="form__input form__area" name="" id="" cols="30" rows="10" wrap="soft" placeholder="Сообщение"></textarea>
+            <div class="confirm">
+                <input id="check" type="checkbox" data-validate-field="checkbox" required>
+                <label class="label" for="check"></label>
+                <p class="confirm__text">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
+            </div>
+            <div class="more-info-black--start">
+                <button class="more-info-black more-info-black-submit" type="submit" href="#">Отправить</button>
+            </div>
+        </form>
+        <div class="conatact-photo">
+            <img src="img/contact-img.jpg" alt="contact" class="contact__img">
+        </div>
+    </div>
+
+
+</section>
+@@include("parts/_footer.html")

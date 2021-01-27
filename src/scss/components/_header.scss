@@ -1,0 +1,66 @@
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100px;
+}
+
+.logo {
+    margin-right: 330px;
+}
+
+.nav {
+    &__list {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        padding: 2px 0;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+    &__item {
+        margin-right: 60px;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $black;
+        padding: 2px 0;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 100%;
+            left: 0;
+            background-color: $black;
+            transition: transform 0.5s;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        &:hover {
+            color: inherit;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+}
+
+.active {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    padding: 2px 0;
+}

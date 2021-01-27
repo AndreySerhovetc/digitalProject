@@ -1,0 +1,123 @@
+.btn {
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    border: 1px solid $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-right: 23px;
+    outline: none;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.btn-active {
+    background-color: $gray;
+    position: relative;
+}
+
+.more-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 221.81px;
+    height: 71px;
+    background-color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    &--header {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+    &::after {
+        content: '';
+        background-image: url('../img/arrow-right.svg');
+        background-size: 24px 24px;
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.more-info-black {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+    border: none;
+    &--fstart {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 221.81px;
+        height: 71px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: $black;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        &::after {
+            content: '';
+            background-image: url('../img/arrow-right-white.svg');
+            background-size: 24px, 24px;
+            width: 24px;
+            height: 24px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &-submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 221.81px;
+        height: 71px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: $black;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        &::after {
+            content: '';
+            background-image: url('../img/arrow-right-white.svg');
+            background-size: 24px, 24px;
+            width: 24px;
+            height: 24px;
+        }
+        &:hover {
+            background-color: lighten($black, 15%)
+        }
+    }
+}

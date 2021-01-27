@@ -1,0 +1,135 @@
+.project-galery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.img1 {
+    grid-column: 1 / 3;
+    position: relative;
+    &:hover .galery-img {
+        opacity: 0.3;
+    }
+    &:hover .hover {
+        opacity: 0.8;
+    }
+}
+
+.img2 {
+    grid-column: 3 / 5;
+    position: relative;
+    &:hover .galery-img {
+        opacity: 0.3;
+    }
+    &:hover .hover {
+        opacity: 0.8;
+    }
+}
+
+.img3 {
+    grid-column: 1 / 2;
+    position: relative;
+    &:hover .galery-img {
+        opacity: 0.3;
+    }
+    &:hover .hover {
+        opacity: 0.8;
+    }
+}
+
+.img4 {
+    grid-column: 2 / 4;
+    position: relative;
+    &:hover .galery-img {
+        opacity: 0.3;
+    }
+    &:hover .hover {
+        opacity: 0.8;
+    }
+}
+
+.img5 {
+    grid-column: 4/5;
+    position: relative;
+    &:hover .galery-img {
+        opacity: 0.3;
+    }
+    &:hover .hover {
+        opacity: 0.8;
+    }
+}
+
+.galery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.hover {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 70px;
+    transition: .5s ease;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: left;
+    cursor: pointer;
+    &-small {
+        padding: 20px 40px;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 64px;
+        color: #FFFFFF;
+        &-small {
+            width: 100%;
+            font-size: 30px;
+            line-height: 30px;
+            color: #fff;
+            font-style: normal;
+            font-weight: bold;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 124px;
+        height: 24px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        &::after {
+            content: '';
+            background-image: url('../img/arrow-right-white.svg');
+            background-size: 24px, 24px;
+            width: 24px;
+            height: 24px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

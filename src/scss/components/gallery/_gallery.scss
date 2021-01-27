@@ -1,0 +1,41 @@
+.gallery {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+        height: 550px;
+        width: 100%;
+        margin-top: 30px;
+    }
+    &__container {
+        margin-top: 60px;
+    }
+    &__pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.page__title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 64px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray;
+    &-name {
+        color: $dark-gray;
+    }
+    &-text {
+        font-weight: bold;
+    }
+}
+
+.line {
+    width: 100%;
+    border-top: 1px solid $gray;
+}
