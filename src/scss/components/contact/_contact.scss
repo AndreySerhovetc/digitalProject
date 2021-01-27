@@ -1,0 +1,32 @@
+    .contact {
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__address {
+            margin-bottom: 43px;
+        }
+        &__phone {
+            margin-bottom: 52px;
+        }
+        &__email {
+            margin-bottom: 30px;
+        }
+        &__name,
+        &__number {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: $black;
+        }
+        &__street,
+        &__mail {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            color: #333333;
+        }
+    }

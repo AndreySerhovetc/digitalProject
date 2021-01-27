@@ -19,19 +19,25 @@
     }
 }
 
-.page__title {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 64px;
-    line-height: 64px;
-    text-transform: uppercase;
-    padding-bottom: 30px;
-    border-bottom: 1px solid $gray;
-    &-name {
-        color: $dark-gray;
-    }
-    &-text {
-        font-weight: bold;
+.page {
+    &__title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 64px;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $gray;
+        &-name {
+            color: $dark-gray;
+        }
+        &-text {
+            font-weight: bold;
+        }
+        &--contact {
+            margin-top: 60px;
+            border: none;
+        }
     }
 }
 

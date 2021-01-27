@@ -121,3 +121,26 @@
         }
     }
 }
+
+.callback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 221.81px;
+    height: 71px;
+    background-color: $black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten($black, 15%)
+    }
+}
