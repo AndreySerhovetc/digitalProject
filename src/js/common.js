@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     let menuItems = document.querySelectorAll(".nav__link");
     let btnsSlide = document.querySelectorAll(".btn");
+    let gallerySlider = document.querySelector(".gallery-slider");
 
 
     let phoneField = document.querySelector(".phone");
@@ -8,21 +9,24 @@ document.addEventListener("DOMContentLoaded", function() {
     im.mask(phoneField);
 
 
-    menuItems.forEach(elem => {
-        elem.addEventListener("click", function() {
-            menuItems.forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
-        })
-    })
+    // menuItems.forEach(elem => {
+    //     elem.addEventListener("click", function() {
+    //         menuItems.forEach(item => item.classList.remove('active'));
+    //         this.classList.add('active');
+    //     })
+    // })
 
+    for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].addEventListener("click", function() {
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
 
 
     //swiper
-    const swiper = new Swiper('.header-slider', {
-        pagination: {
-            el: '.swiper-pagination',
-
-        },
+    const swiperHeader = new Swiper('.header-slider', {
         navigation: {
             nextEl: '.next-btn',
             prevEl: '.prev-btn',
@@ -59,6 +63,36 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     })
 
+
+    const swiperGallery = new Swiper('.gallery-slider', {
+        navigation: {
+            nextEl: '.next-btn',
+            prevEl: '.prev-btn',
+        },
+        pagination: {
+            el: '.pagination__slide',
+            type: 'fraction',
+            renderFraction: function(currentClass, totalClass) {
+
+                return '<span class="' + currentClass + '"></span>' +
+                    ' <img class="slide-line" src="img/line.svg"> ' +
+                    '<span class="' + totalClass + '"></span>';
+            },
+            formatFractionCurrent: function(number) {
+                if (number < 10) {
+                    number = '0' + number;
+                }
+                return number;
+            },
+            formatFractionTotal: function(number) {
+                if (number < 10) {
+                    number = '0' + number;
+                }
+                return number;
+            }
+        },
+
+    });
     //validete
     new JustValidate('.js-form', {
         rules: {
